@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.zsk.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/courseFragment"
+        android:name="com.zsk.course.CourseFragment"
+        android:label="@string/title_course"
+        tools:layout="@layout/fragment_course" />
+    <fragment
+        android:id="@+id/studyFragment"
+        android:name="com.zsk.study.StudyFragment"
+        android:label="@string/title_study"
+        tools:layout="@layout/fragment_study" />
+
+    <fragment
+        android:id="@+id/mineFragment"
+        android:name="com.zsk.mine.MineFragment"
+        android:label="@string/title_mine"
+        tools:layout="@layout/fragment_mine" />
+</navigation>

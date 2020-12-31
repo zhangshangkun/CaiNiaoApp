@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+apply from: '../dependencies.gradle'
+
+android {
+    //from dependencies.gradle
+    defaultConfig {
+
+    }
+}
+dependencies {
+    //from dependencies.gradle
+
+    //Androidx JetPack最新的startUp组件
+    api 'androidx.startup:startup-runtime:1.0.0-alpha03'
+    //okHttp
+    implementation 'com.squareup.okhttp3:okhttp:4.8.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.8.0'
+    //retrofit
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    //coil
+    implementation 'io.coil-kt:coil:0.13.0'
+
+    //utils
+    api 'com.blankj:utilcodex:1.29.0'
+    //腾讯的key-value
+    implementation 'com.tencent:mmkv-static:1.2.1'
+}

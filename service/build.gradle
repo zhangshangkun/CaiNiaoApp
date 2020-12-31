@@ -1,0 +1,15 @@
+apply plugin: 'com.android.library'
+apply from: '../dependencies.gradle'
+
+android {
+    //others from dependencies.gradle
+    defaultConfig {
+    }
+}
+dependencies {
+    //others from dependencies.gradle
+    api project(path:':common')
+    //调试助手工具
+    debugImplementation 'com.didichuxing.doraemonkit:doraemonkit:3.2.0'
+    releaseImplementation 'com.didichuxing.doraemonkit:doraemonkit-no-op:3.2.0'
+}
