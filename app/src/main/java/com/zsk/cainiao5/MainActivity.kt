@@ -6,10 +6,10 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.zsk.cainiao5.databinding.ActivityMainBinding
 import com.zsk.common.base.BaseActivity
 import com.zsk.common.widget.BnvVp2Mediator
-import com.zsk.course.CourseFragment
-import com.zsk.home.HomeFragment
-import com.zsk.mine.MineFragment
-import com.zsk.study.StudyFragment
+//import com.zsk.course.CourseFragment
+//import com.zsk.home.HomeFragment
+//import com.zsk.mine.MineFragment
+//import com.zsk.study.StudyFragment
 
 /**
 * @创建日期: 2020/12/30 10:33
@@ -23,10 +23,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     private val fragments: Map<Int, Fragment> = mapOf<Int, Fragment>(
-        INDEX_HOME to HomeFragment(),
-        INDEX_COURSE to CourseFragment(),
-        INDEX_STUDY to StudyFragment(),
-        INDEX_MINE to MineFragment()
+//        INDEX_HOME to HomeFragment(),
+//        INDEX_COURSE to CourseFragment(),
+//        INDEX_STUDY to StudyFragment(),
+//        INDEX_MINE to MineFragment()
     )
 
     override fun initConfig() {

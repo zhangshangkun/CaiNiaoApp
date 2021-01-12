@@ -5,6 +5,8 @@ if (singleModule.toBoolean()){
     apply plugin: 'com.android.library'
 }
 apply from: '../dependencies.gradle'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     //from dependencies.gradle
@@ -17,5 +19,7 @@ android {
 }
 dependencies {
     implementation project(path:':service')
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     //from dependencies.gradle
 }

@@ -61,7 +61,7 @@
                 android:inputType="number"
                 android:maxLength="11"
                 android:singleLine="true"
-                android:text="@={vm.obMobile}"
+                android:text="@={vm.obAccount}"
                 tools:text="请输入手机号" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -122,8 +122,8 @@
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:gravity="center"
-            android:clickable="@{vm.obMobile.length()>8&amp;&amp;vm.obPassword.length()>8}"
-            android:enabled="@{vm.obMobile.length()>0&amp;&amp;vm.obPassword.length()>0}"
+            android:clickable="@{vm.obAccount.length()>8&amp;&amp;vm.obPassword.length()>8}"
+            android:enabled="@{vm.obAccount.length()>0&amp;&amp;vm.obPassword.length()>0}"
             android:onClick="@{()->vm.goLogin()}"
             android:text="登录"
             android:textColor="@android:color/white"

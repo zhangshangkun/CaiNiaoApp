@@ -1,9 +1,10 @@
 package com.zsk.login
 
-import androidx.activity.viewModels
 import com.blankj.utilcode.util.ToastUtils
 import com.zsk.common.base.BaseActivity
 import com.zsk.login.databinding.ActivityLoginBinding
+import com.zsk.login.net.RegisterRsp
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /**
  * @创建日期: 2020/12/30 14:33
@@ -12,14 +13,15 @@ import com.zsk.login.databinding.ActivityLoginBinding
  */
 class LoginActivity : BaseActivity<ActivityLoginBinding>() {
 
-    private val viewModel: LoginViewModel by viewModels { defaultViewModelProviderFactory }
+    private val viewModel: LoginViewModel by viewModel()
 
     override fun getLayoutRes(): Int {
         return R.layout.activity_login
     }
 
-    override fun initConfig() {
-        super.initConfig()
+
+    override fun initView() {
+        super.initView()
         mBinding.apply {
             vm = viewModel
             mtoolbarLogin.setNavigationOnClickListener { finish() }
@@ -29,8 +31,19 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
         }
     }
 
-    override fun initView() {
-        super.initView()
+    override fun initConfig() {
+        super.initConfig()
+        viewModel.apply {
+            liveRegisterRsp.observerKt {
+                if (it?.is_register == RegisterRsp.FLAG_IS_REGISTERED) {
+                    repoLogin()
+                }
+            }
+            liveLoginRsp.observerKt {
+                ToastUtils.showShort("登录结果" + it.toString())
+            }
+        }
+
     }
 
     override fun initData() {

@@ -1,6 +1,5 @@
-package com.zsk.login
+package com.zsk.login.net
 
-import com.zsk.login.net.LoginReqBody
 import com.zsk.service.network.BaseCniaoRsp
 import retrofit2.Call
 import retrofit2.http.Body
@@ -16,8 +15,8 @@ import retrofit2.http.Query
 interface LoginService {
 
     @GET("accounts/phone/is/register")
-    suspend fun isRegister(@Query("mobi") mobi:String): Call<BaseCniaoRsp>
+    fun isRegister(@Query("mobi") mobi: String): Call<BaseCniaoRsp>
 
     @POST("accounts/course/10301/login")
-    suspend fun login(@Body reqBody: LoginReqBody):Call<BaseCniaoRsp>
+    fun login(@Body reqBody: LoginReqBody): Call<BaseCniaoRsp>
 }
